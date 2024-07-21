@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,17 +12,20 @@
             background-color: #f8f9fa;
             padding-top: 20px;
         }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .product-item {
             margin-bottom: 20px;
         }
+
         .cart-item {
             display: flex;
             justify-content: space-between;
@@ -29,39 +33,47 @@
             border-bottom: 1px solid #ddd;
             padding: 10px 0;
         }
+
         .cart-item img {
             width: 80px;
             height: 80px;
             object-fit: cover;
             margin-right: 20px;
         }
+
         .cart-item p {
             margin: 0;
         }
+
         .total-price {
             font-weight: bold;
             font-size: 1.2em;
             margin-top: 20px;
         }
+
         .btn-custom {
             background-color: #007bff;
             border-color: #007bff;
         }
+
         .btn-custom:hover {
             background-color: #0056b3;
             border-color: #0056b3;
         }
+
         .card {
             border: 1px solid #ddd;
             border-radius: 8px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
             transition: box-shadow 0.3s ease;
         }
+
         .card:hover {
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1 class="text-center mb-4">Trang chủ</h1>
@@ -202,11 +214,11 @@
         }
 
         // Đăng ký và đăng nhập
-        document.getElementById('registerForm').addEventListener('submit', function(event) {
+        document.getElementById('registerForm').addEventListener('submit', function (event) {
             event.preventDefault();
             let username = document.getElementById('username').value;
             let password = document.getElementById('password').value;
-            
+
             // Lưu thông tin đăng ký vào Local Storage
             localStorage.setItem('username', username);
             localStorage.setItem('password', password);
@@ -214,7 +226,7 @@
             alert('Đăng ký thành công!');
         });
 
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
             event.preventDefault();
             let loginUsername = document.getElementById('loginUsername').value;
             let loginPassword = document.getElementById('loginPassword').value;
@@ -233,10 +245,10 @@
         });
 
         // Tìm kiếm sản phẩm
-        document.getElementById('searchForm').addEventListener('submit', function(event) {
+        document.getElementById('searchForm').addEventListener('submit', function (event) {
             event.preventDefault();
             let keyword = document.getElementById('searchInput').value.toLowerCase();
-            
+
             let filteredProducts = products.filter(product =>
                 product.name.toLowerCase().includes(keyword)
             );
@@ -263,4 +275,5 @@
         });
     </script>
 </body>
+
 </html>

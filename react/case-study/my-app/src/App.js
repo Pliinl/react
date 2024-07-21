@@ -46,7 +46,7 @@ const products = [
   }
 ];
 
-// Định nghĩa danh sách các danh mục sản phẩm
+// Danh sách các danh mục sản phẩm
 const categories = [
   { id: 'all', name: 'Tất cả' },
   { id: 'clothing', name: 'Quần áo' },
@@ -251,7 +251,7 @@ function App() {
       {/* Hiển thị form Đăng ký nếu showRegisterForm là true */}
       {showRegisterForm && (
         <div className="row mb-4 justify-content-center">
-          <div className="col-md-12">
+          <div className="col-md-5">
             <h2 className="text-center">Đăng ký</h2>
             <form onSubmit={handleRegister}>
               <div className="form-group">
@@ -314,7 +314,7 @@ function App() {
       {/* Hiển thị form Đăng nhập nếu showLoginForm là true */}
       {showLoginForm && (
         <div className="row mb-4 justify-content-center">
-          <div className="col-md-12">
+          <div className="col-md-5">
             <h2 className="text-center">Đăng nhập</h2>
             <form onSubmit={handleLogin}>
               <div className="form-group">
