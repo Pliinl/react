@@ -122,7 +122,7 @@ function App() {
       setNotification('Thêm sản phẩm vào giỏ hàng thành công.');
       setTimeout(() => {
         setNotification('');
-      }, 3000);
+      }, 2000);
     }
   };
 
@@ -133,7 +133,7 @@ function App() {
     setNotification('Xóa sản phẩm khỏi giỏ hàng thành công.');
     setTimeout(() => {
       setNotification('');
-    }, 3000);
+    }, 2000);
   };
 
   // Thay đổi số lượng sản phẩm trong giỏ hàng
@@ -162,6 +162,9 @@ function App() {
 
     if (password !== confirmPassword) {
       setNotification('Mật khẩu nhập lại không khớp.');
+      setTimeout(() => {
+        setNotification('');
+      }, 2000);
       return;
     }
 
@@ -170,6 +173,9 @@ function App() {
     localStorage.setItem('password', password);
 
     setNotification('Đăng ký thành công!');
+    setTimeout(() => {
+      setNotification('');
+    }, 2000);
     setShowRegisterForm(false); // Ẩn form đăng ký sau khi đăng ký thành công
   };
 
@@ -187,9 +193,15 @@ function App() {
 
     if (loginUsername === storedUsername && loginPassword === storedPassword) {
       setNotification('Đăng nhập thành công!');
+      setTimeout(() => {
+        setNotification('');
+      }, 2000);
       setShowLoginForm(false); // Ẩn form đăng nhập sau khi đăng nhập thành công
     } else {
       setNotification('Tên đăng nhập hoặc mật khẩu không đúng.');
+      setTimeout(() => {
+        setNotification('');
+      }, 2000);
     }
   };
 
